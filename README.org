@@ -1,0 +1,11 @@
+* ParaCap
+This is a plugin for Blender (tested on version 4.2.3) for creating a 3-dimensional motion track from two tracks captured from two video clips filmed from adjacent positions. Basically it is parallactic motion capturing, hence the name.
+
+* Installation
+Download the blender_paracap.py file to the folder, where you store your Blender plugins and open Blender. Navigate the top menubar to Edit → Preferences. In the Add-ons Tab of the new window click the drop-down menu in the top right corner and choose Install from Disk. Choose the downloaded file and again click Install from Disk.
+
+* Usage
+Take two video clips of the subject you want to track in three dimensions. Position the cameras adjacent to each other and note the distance between them. They should be at the same height. Also note the width of the area where your actor is performing. (The width that is covered by the camera)  Then load the clips into Blender and open the Motion Tracking workspace. Select the points you want to track, track them, parent them to an Empty and convert the animation data to an f-curve. Repeat the step for the other video clip with the same points. For convenience, name the Empties to keep track of which ones are pairs. Then open the n-menu in the 3d-viewport and select the ParaCap tab. In there, reference the right and left tracks for each point, copy the previously noted distance of the cameras, the number of frames your track has and the previously measured width of action area. Then hit the calculate-button and a new Empty should appear with now 3-dimensional movement. Repeat this last step for all the other pairs you captured.
+
+* Disclaimer
+I am a hobbyist programmer who likes playing around with programming languages and other nerdy stuff in my free time, so do not expect either elegant or efficient code. Also there may be bugs. Especially due to the fact, that this is my first time using python and also is it my first time to write an add-on for Blender, a truely magnificent software.
